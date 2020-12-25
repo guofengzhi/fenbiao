@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.fenbiao.dao.FenBiaoDao">
+
+	<!-- 过滤查询列表 -->
+	<select id="getName" resultType="java.lang.String">
+		SELECT
+			t.name
+		FROM t_user t
+		WHERE t.id=#{id}
+	</select>
+
+	<insert id="save">
+		insert into t_user(name, sex) values (#{name}, #{sex})
+	</insert>
+</mapper>
